@@ -159,8 +159,8 @@ def _verilator_cc_library(ctx):
 
     return cc_compile_and_link_static_library(
         ctx,
-        srcs = [verilator_output_cpp],
-        hdrs = [verilator_output_hpp],
+        srcs = [verilator_output_cpp, verilator_output_hpp],
+        hdrs = [],
         defines = defines,
         runfiles = runfiles,
         includes = [verilator_output_hpp.path],
